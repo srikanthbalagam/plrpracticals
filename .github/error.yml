@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-      - run: echo "This is wrong indentation!"
+    - run: echo "This is wrong indentation!"

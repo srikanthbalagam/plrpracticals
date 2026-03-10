@@ -1,0 +1,24 @@
+name: Print Environment Variables
+
+on: push
+
+jobs:
+  print-env:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: echo "Hello GitHub Actions!"
+
+      - run: date
+
+      - run: uname -a
+
+      - run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Branch: $GITHUB_REF"
+          echo "Workflow Run ID: $GITHUB_RUN_ID"
+          echo "Actor: $GITHUB_ACTOR"
+
+      - run: ls -al
